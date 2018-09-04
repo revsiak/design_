@@ -1,9 +1,0 @@
-<svg>
-	<filter id="pixelate">
-		<feFlood x="4" y="4" height="2" width="2"/>
-		<feComposite width="8" height="8"/>
-		<feTile result="a"/>
-		<feComposite in="SourceGraphic" in2="a" operator="in"/>
-		<feMorphology operator="dilate" radius="4"/>
-	</filter>
-</svg>
