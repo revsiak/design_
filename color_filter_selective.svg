@@ -1,0 +1,54 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<filter id="color_filter_selective" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+		<feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="luminance_layer"/>
+
+		<feComponentTransfer result="reverse_luminance_layer">
+			<feFuncA type="table" tableValues="1 0"/>
+		</feComponentTransfer>
+
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_01">
+			<feFuncA type="discrete" tableValues="1 0 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_02">
+			<feFuncA type="discrete" tableValues="0 1 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_03">
+			<feFuncA type="discrete" tableValues="0 0 1 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_04">
+			<feFuncA type="discrete" tableValues="0 0 0 1 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_05">
+			<feFuncA type="discrete" tableValues="0 0 0 0 1 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_06">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 1 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_07">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 1 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_08">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 1"/>
+		</feComponentTransfer>
+
+
+		<feMerge result="selected_layer">
+			<feMergeNode in="reverse_luminance_layer_01"/>
+			<feMergeNode in="reverse_luminance_layer_02"/>
+			<feMergeNode in="reverse_luminance_layer_03"/>
+			<feMergeNode in="reverse_luminance_layer_04"/>
+			<feMergeNode in="reverse_luminance_layer_05"/>
+		</feMerge>
+
+		<feComposite operator="in" in="SourceGraphic" in2="selected_layer" result="selected_original_layer"/>
+		
+		
+		<feColorMatrix type="matrix" in2="selected_original_layer" values="1 0 0 0 0
+			                                                               0 1 0 0 0
+			                                                               0 0 1 0 0
+			                                                               0 0 0 1 0" result="color_filter"/>
+		
+		
+		<feComposite operator="over" in="color_filter" in2="reverse_luminance_layer" result="color_image_selective"/>
+	</filter>
+</svg>

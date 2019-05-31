@@ -1,0 +1,17 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<filter id="color_filter_duotone" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+		<feColorMatrix type="matrix" in="SourceGraphic" values="0.21 0.71 0.08 0    0
+			                                                    0.21 0.71 0.08 0    0
+			                                                    0.21 0.71 0.08 0    0
+			                                                    0    0    0    1    0" result="grayscale_layer"/>
+
+		<feComponentTransfer in="grayscale_layer" result="color_filter">
+			<feFuncR type="table" tableValues="0.19, 0.98"/>
+			<feFuncG type="table" tableValues="0.38, 0.98"/>
+			<feFuncB type="table" tableValues="0.28, 0.98"/>
+		</feComponentTransfer>
+
+		
+		<feComposite operator="in" in="color_filter" in2="SourceGraphic" result="duotone_image"/>
+	</filter>
+</svg>

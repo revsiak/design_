@@ -1,0 +1,99 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<filter id="edge_filter" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+		<!--The source image is duplicated into a layer and has a grayscale filter applied to it. The layer has the details removed based on thresholds.-->
+	<feColorMatrix type="matrix" in="SourceGraphic" values="0.21 0.71 0.08 0    0
+															0.21 0.71 0.08 0    0
+															0.21 0.71 0.08 0    0
+															0    0    0    1    0" result="grayscale_image"/>
+
+	<feComponentTransfer in="grayscale_image" result="grayscale_layer_thresholds">
+		<feFuncA type="discrete" tableValues="0 0.1 0.2 0.3 0.5 0.8 0.9 1"/>
+	</feComponentTransfer>
+
+
+	<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_01">
+        <feFuncA type="discrete" tableValues="1 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_02">
+        <feFuncA type="discrete" tableValues="0 1 0 0 0 0 0 0 0 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_03">
+        <feFuncA type="discrete" tableValues="0 0 1 0 0 0 0 0 0 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_04">
+        <feFuncA type="discrete" tableValues="0 0 0 1 0 0 0 0 0 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_05">
+        <feFuncA type="discrete" tableValues="0 0 0 0 1 0 0 0 0 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_06">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 1 0 0 0 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_07">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 1 0 0 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_08">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 1 0 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_09">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 1 0 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_10">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 1 0 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_11">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 1 0 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_12">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 1 0 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_13">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_14">
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 1"/>
+    </feComponentTransfer>
+
+
+
+	<!--The source image is separated into vertical (01) and horizontal (02) where the sobel operator is applied to the respective one. The horizontal and vertical edges are combined into a layer.-->
+    <feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix="-1  0  1
+    													                              -2  0  2
+													                                  -1  0  1" result="vertical_t"/>
+	<feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix=" 1  0 -1
+													                                   2  0 -2
+													                                   1  0 -1" result="vertical_b"/>
+	<feComposite operator="arithmetic" in="vertical_t" in2="vertical_b" k2="1" k3="1" result="vertical"/>
+	
+	<feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix="-1 -2 -1
+		    													                       0  0  0
+	    													                           1  2  1" result="horizontal_t"/>
+    <feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix=" 1  2  1
+													                                   0  0  0
+													                                  -1 -2 -1" result="horizontal_b"/>
+	<feComposite operator="arithmetic" in="horizontal_t" in2="horizontal_b" k2="1" k3="1" result="horizontal"/>
+
+	<feBlend mode="lighten" in="vertical" in2="horizontal" result="edge_layer"/>
+	
+	
+
+	<!--The edge layer and thresholds are combined to make a clean version of the source image's outline.-->
+	<feBlend mode="multiply" in="edge_layer" in2="grayscale_layer_thresholds" result="edge_layer_thresholds"/>
+
+
+
+	<feColorMatrix type="matrix" in="edge_layer_thresholds" values="0.21 0.71 0.08 0    0
+															        0.21 0.71 0.08 0    0
+															        0.21 0.71 0.08 0    0
+															        0    0    0    1    0" result="edge_layer_thresholds_grayscale"/>
+
+	<feComponentTransfer in="edge_layer_thresholds_grayscale" result="edge_layer_thresholds_grayscale_brightened">
+		<feFuncA type="linear" slope="1.1"/>
+	</feComponentTransfer>
+
+	<feColorMatrix type="matrix" in="edge_layer_thresholds_grayscale_brightened" values="-1  0  0  0  1
+											                                              0 -1  0  0  1
+											                                              0  0 -1  0  1
+											                                              0  0  0  1  0" result="edge_layer_thresholds_grayscale_brightened_inverted"/>
+    </filter>
+</svg>

@@ -1,0 +1,283 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<filter id="watercolor_filter" color-interpolation-filters="sRGB">
+		<feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="luminance_layer"/>
+
+		<feComponentTransfer in="luminance_layer" result="reverse_luminance_layer">
+			<feFuncA type="table" tableValues="1 0"/>
+		</feComponentTransfer>
+		
+		
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_01">
+			<feFuncA type="discrete" tableValues="1 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_02">
+			<feFuncA type="discrete" tableValues="0 1 0 0 0 0 0 0 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_03">
+			<feFuncA type="discrete" tableValues="0 0 1 0 0 0 0 0 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_04">
+			<feFuncA type="discrete" tableValues="0 0 0 1 0 0 0 0 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_05">
+			<feFuncA type="discrete" tableValues="0 0 0 0 1 0 0 0 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_06">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 1 0 0 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_07">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 1 0 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_08">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 1 0 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_09">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 1 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_10">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 1 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_11">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 1 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_12">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 1 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_13">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_14">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 1"/>
+		</feComponentTransfer>
+
+
+		<feComponentTransfer in="reverse_luminance_layer_01" result="reverse_luminance_layer_01">
+			<feFuncR type="table" tableValues="0.98, 1"/>
+			<feFuncG type="table" tableValues="0.98, 1"/>
+			<feFuncB type="table" tableValues="0.98, 1"/>
+			<feFuncA type="table" tableValues="0, 0.22"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_02" result="reverse_luminance_layer_02">
+			<feFuncR type="table" tableValues="0.94, 1"/>
+			<feFuncG type="table" tableValues="0.94, 1"/>
+			<feFuncB type="table" tableValues="0.94, 1"/>
+			<feFuncA type="table" tableValues="0, 0.08"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_03" result="reverse_luminance_layer_03">
+			<feFuncR type="table" tableValues="0.86, 1"/>
+			<feFuncG type="table" tableValues="0.86, 1"/>
+			<feFuncB type="table" tableValues="0.86, 1"/>
+			<feFuncA type="table" tableValues="0, 0.08"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_04" result="reverse_luminance_layer_04">
+			<feFuncR type="table" tableValues="0.78, 1"/>
+			<feFuncG type="table" tableValues="0.78, 1"/>
+			<feFuncB type="table" tableValues="0.78, 1"/>
+			<feFuncA type="table" tableValues="0, 0.11"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_05" result="reverse_luminance_layer_05">
+			<feFuncR type="table" tableValues="0.71, 1"/>
+			<feFuncG type="table" tableValues="0.71, 1"/>
+			<feFuncB type="table" tableValues="0.71, 1"/>
+			<feFuncA type="table" tableValues="0, 0.11"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_06" result="reverse_luminance_layer_06">
+			<feFuncR type="table" tableValues="0.63, 1"/>
+			<feFuncG type="table" tableValues="0.63, 1"/>
+			<feFuncB type="table" tableValues="0.63, 1"/>
+			<feFuncA type="table" tableValues="0, 0.11"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_07" result="reverse_luminance_layer_07">
+			<feFuncR type="table" tableValues="0.55, 1"/>
+			<feFuncG type="table" tableValues="0.55, 1"/>
+			<feFuncB type="table" tableValues="0.55, 1"/>
+			<feFuncA type="table" tableValues="0, 0.11"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_08" result="reverse_luminance_layer_08">
+			<feFuncR type="table" tableValues="0.47, 1"/>
+			<feFuncG type="table" tableValues="0.47, 1"/>
+			<feFuncB type="table" tableValues="0.47, 1"/>
+			<feFuncA type="table" tableValues="0, 0.11"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_09" result="reverse_luminance_layer_09">
+			<feFuncR type="table" tableValues="0.39, 1"/>
+			<feFuncG type="table" tableValues="0.39, 1"/>
+			<feFuncB type="table" tableValues="0.39, 1"/>
+			<feFuncA type="table" tableValues="0, 0.11"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_10" result="reverse_luminance_layer_10">
+			<feFuncR type="table" tableValues="0.31, 1"/>
+			<feFuncG type="table" tableValues="0.31, 1"/>
+			<feFuncB type="table" tableValues="0.31, 1"/>
+			<feFuncA type="table" tableValues="0, 0.11"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_11" result="reverse_luminance_layer_11">
+			<feFuncR type="table" tableValues="0.23, 1"/>
+			<feFuncG type="table" tableValues="0.23, 1"/>
+			<feFuncB type="table" tableValues="0.23, 1"/>
+			<feFuncA type="table" tableValues="0, 0.11"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_12" result="reverse_luminance_layer_12">
+			<feFuncR type="table" tableValues="0.16, 1"/>
+			<feFuncG type="table" tableValues="0.16, 1"/>
+			<feFuncB type="table" tableValues="0.16, 1"/>
+			<feFuncA type="table" tableValues="0, 0.22"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_13" result="reverse_luminance_layer_13">
+			<feFuncR type="table" tableValues="0.08, 1"/>
+			<feFuncG type="table" tableValues="0.08, 1"/>
+			<feFuncB type="table" tableValues="0.08, 1"/>
+			<feFuncA type="table" tableValues="0, 0.22"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_14" result="reverse_luminance_layer_14">
+			<feFuncR type="table" tableValues="0.03, 1"/>
+			<feFuncG type="table" tableValues="0.03, 1"/>
+			<feFuncB type="table" tableValues="0.03, 1"/>
+			<feFuncA type="table" tableValues="0, 0.32"/>
+		</feComponentTransfer>
+
+
+		
+		<feMorphology operator="dilate" in="reverse_luminance_layer_01" radius="88" result="reverse_luminance_layer_01"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_02" radius="22" result="reverse_luminance_layer_02"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_03" radius="22" result="reverse_luminance_layer_03"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_04" radius="11" result="reverse_luminance_layer_04"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_05" radius="11" result="reverse_luminance_layer_05"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_06" radius="8" result="reverse_luminance_layer_06"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_07" radius="8" result="reverse_luminance_layer_07"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_08" radius="8" result="reverse_luminance_layer_08"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_09" radius="8" result="reverse_luminance_layer_09"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_10" radius="2" result="reverse_luminance_layer_10"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_11" radius="2" result="reverse_luminance_layer_11"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_12" radius="0" result="reverse_luminance_layer_12"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_13" radius="0" result="reverse_luminance_layer_13"/>
+		<feMorphology operator="dilate" in="reverse_luminance_layer_14" radius="0" result="reverse_luminance_layer_14"/>
+
+		
+		<feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="8" result="turbulence"/>
+
+		<feDisplacementMap in="reverse_luminance_layer_01" in2="turbulence" scale="88" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_01"/>
+		<feDisplacementMap in="reverse_luminance_layer_02" in2="turbulence" scale="22" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_02"/>
+		<feDisplacementMap in="reverse_luminance_layer_03" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_03"/>
+		<feDisplacementMap in="reverse_luminance_layer_04" in2="turbulence" scale="17" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_04"/>
+		<feDisplacementMap in="reverse_luminance_layer_05" in2="turbulence" scale="17" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_05"/>
+		<feDisplacementMap in="reverse_luminance_layer_06" in2="turbulence" scale="11" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_06"/>
+		<feDisplacementMap in="reverse_luminance_layer_07" in2="turbulence" scale="11" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_07"/>
+		<feDisplacementMap in="reverse_luminance_layer_08" in2="turbulence" scale="11" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_08"/>
+		<feDisplacementMap in="reverse_luminance_layer_09" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_09"/>
+		<feDisplacementMap in="reverse_luminance_layer_10" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_10"/>
+		<feDisplacementMap in="reverse_luminance_layer_11" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_11"/>
+		<feDisplacementMap in="reverse_luminance_layer_12" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_12"/>
+		<feDisplacementMap in="reverse_luminance_layer_13" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_13"/>
+		<feDisplacementMap in="reverse_luminance_layer_14" in2="turbulence" scale="0" xChannelSelector="R" yChannelSelector="B" result="reverse_luminance_layer_14"/>
+
+		<feMerge result="grayscale_layer_splashed">
+			<feMergeNode in="reverse_luminance_layer_01"/>
+			<feMergeNode in="reverse_luminance_layer_02"/>
+			<feMergeNode in="reverse_luminance_layer_03"/>
+			<feMergeNode in="reverse_luminance_layer_04"/>
+			<feMergeNode in="reverse_luminance_layer_05"/>
+			<feMergeNode in="reverse_luminance_layer_06"/>
+			<feMergeNode in="reverse_luminance_layer_07"/>
+			<feMergeNode in="reverse_luminance_layer_08"/>
+			<feMergeNode in="reverse_luminance_layer_09"/>
+			<feMergeNode in="reverse_luminance_layer_10"/>
+			<feMergeNode in="reverse_luminance_layer_11"/>
+			<feMergeNode in="reverse_luminance_layer_12"/>
+			<feMergeNode in="reverse_luminance_layer_13"/>
+			<feMergeNode in="reverse_luminance_layer_14"/>
+		</feMerge>
+
+
+		
+		<feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="8" result="random_gradient"/>
+
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_01" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_01"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_02" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_02"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_03" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_03"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_04" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_04"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_05" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_05"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_06" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_06"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_07" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_07"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_08" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_08"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_09" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_09"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_10" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_10"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_11" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_11"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_12" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_12"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_13" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_13"/>
+		<feComposite operator="arithmetic" in="reverse_luminance_layer_14" in2="random_gradient" k1="0.9" k2="0.3" k3="0" result="reverse_luminance_layer_rndmgradient_14"/>
+
+		<feMerge result="grayscale_layer_splashed_rndmgradient">
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_01"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_02"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_03"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_04"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_05"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_06"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_07"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_08"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_09"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_10"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_11"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_12"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_13"/>
+			<feMergeNode in="reverse_luminance_layer_rndmgradient_14"/>
+		</feMerge>
+
+
+		<feColorMatrix in="grayscale_layer_splashed_rndmgradient" type="matrix" values="1   0   0   0   0
+        	                                                               0   1   0   0   0
+        	                                                               0   0   1   0   0
+        	                                                               0   0   0   1   0" result="original_layer_color_splashed"/>
+
+
+	    
+	    
+
+	    <feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix="-1  0  1
+	    													                              -2  0  2
+    													                                  -1  0  1" result="horizontal_t"/>
+		<feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix=" 1  0 -1
+  												                                   		   2  0 -2
+      												                                       1  0 -1" result="horizontal_b"/>
+        <feComposite operator="arithmetic" in="horizontal_t" in2="horizontal_b" k2="1" k3="1" result="horizontal"/>
+
+        <feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix="-1 -2 -1
+        	    													                       0  0  0
+            													                           1  2  1" result="vertical_t"/>
+        <feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix=" 1  2  1
+        														                           0  0  0
+        														                          -1 -2 -1" result="vertical_b"/>
+        <feComposite operator="arithmetic" in="vertical_t" in2="vertical_b" k2="1" k3="1" result="vertical"/>
+        
+        <feBlend mode="lighten" in="horizontal" in2="vertical" result="edge_layer"/>
+
+    	
+    	<feBlend mode="multiply" in="edge_layer" in2="grayscale_layer_splashed" result="edge_layer_thresholds"/>
+
+    	
+    	<feColorMatrix type="matrix" in="edge_layer_thresholds" values="0.21 0.71 0.08 0    0
+            															0.21 0.71 0.08 0    0
+            															0.21 0.71 0.08 0    0
+            															0    0    0    1    0" result="edge_layer_thresholds_grayscale"/>
+
+    	<feColorMatrix type="matrix" in="edge_layer_thresholds_grayscale" values="-1  0  0  0  1
+    											                                   0 -1  0  0  1
+    											                                   0  0 -1  0  1
+    											                                   0  0  0  1  0" result="edge_layer_thresholds_grayscale_inverted"/>
+
+    	<feComponentTransfer in="edge_layer_thresholds_grayscale_inverted" result="edge_layer_thresholds_grayscale_inverted_brightened">
+    		<feFuncA type="linear" slope="0.22"/>
+    	</feComponentTransfer>
+
+    	<feDisplacementMap in="edge_layer_thresholds_grayscale_inverted_brightened" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G" result="edge_layer_thresholds_grayscale_inverted_brightened_sketched"/>
+
+
+
+		
+
+		<feBlend mode="normal" in="original_layer_color_splashed" in2="edge_layer_thresholds_grayscale_inverted_brightened_sketched" result="original_layer_color_splashed_sketched"/>
+
+        <feComposite operator="in" in="original_layer_color_splashed_sketched" in2="SourceGraphic" result="original_image_color_splashed_sketched"/>
+    </filter>
+</svg>

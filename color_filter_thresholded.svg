@@ -1,0 +1,48 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<filter id="color_filter_thresholds" color-interpolation-filters="sRGB">
+		<feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="luminance_layer"/>
+
+		<feComponentTransfer in="luminance_layer" result="reverse_luminance_layer">
+			<feFuncA type="table" tableValues="1 0"/>
+		</feComponentTransfer>
+
+
+		
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_01">
+			<feFuncA type="discrete" tableValues="1 1 0 0 0 0 0"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_02">
+			<feFuncA type="discrete" tableValues="0 0 1 1 1 0 0"/></feComponentTransfer>
+
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_03">
+			<feFuncA type="discrete" tableValues="0 0 0 0 0 1 1"/>
+		</feComponentTransfer>
+
+
+		<feComponentTransfer in="reverse_luminance_layer_01" result="original_layer_filtered_01">
+			<feFuncR type="table" tableValues="0.98, 1"/>
+			<feFuncG type="table" tableValues="0.98, 1"/>
+			<feFuncB type="table" tableValues="0.98, 1"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_02" result="original_layer_filtered_02">
+			<feFuncR type="table" tableValues="0.18, 1"/>
+			<feFuncG type="table" tableValues="0.28, 1"/>
+			<feFuncB type="table" tableValues="0.38, 1"/>
+		</feComponentTransfer>
+		<feComponentTransfer in="reverse_luminance_layer_03" result="original_layer_filtered_03">
+			<feFuncR type="table" tableValues="0.08, 1"/>
+			<feFuncG type="table" tableValues="0.01, 1"/>
+			<feFuncB type="table" tableValues="0.26, 1"/>
+		</feComponentTransfer>
+
+
+
+		<feMerge result="original_layer_filtered">
+			<feMergeNode in="original_layer_filtered_01"/>
+			<feMergeNode in="original_layer_filtered_02"/>
+			<feMergeNode in="original_layer_filtered_03"/>
+		</feMerge>
+
+		<feComposite operator="in" in="original_layer_filtered" in2="SourceGraphic" result="color_image"/>
+	</filter>
+</svg>

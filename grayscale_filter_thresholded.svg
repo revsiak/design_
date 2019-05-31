@@ -1,0 +1,17 @@
+<svg>
+	<filter id="grayscale_filter_threshold" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+		<feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="luminance_layer"/>
+
+		<feComponentTransfer in="luminance_layer" result="reverse_luminance_layer">
+			<feFuncA type="table" tableValues="1 0"/>
+		</feComponentTransfer>
+
+		<feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_thresholds">
+			<feFuncA type="discrete" tableValues="0 0.2 0.4 0.6 0.8 1"/>
+		</feComponentTransfer>
+
+		
+		
+		<feComposite operator="in" in="reverse_luminance_layer_thresholds" in2="SourceGraphic" result="grayscale_image_thresholds"/>
+	</filter>
+</svg>

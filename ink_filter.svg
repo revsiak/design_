@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<filter id="ink_filter" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="luminance_layer"/>
+
+            <feComponentTransfer in="luminance_layer" result="reverse_luminance_layer">
+                  <feFuncA type="table" tableValues="1 0"/>
+            </feComponentTransfer>
+            
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_01">
+                  <feFuncA type="discrete" tableValues="1 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_02">
+                  <feFuncA type="discrete" tableValues="0 1 0 0 0 0 0 0 0 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_03">
+                  <feFuncA type="discrete" tableValues="0 0 1 0 0 0 0 0 0 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_04">
+                  <feFuncA type="discrete" tableValues="0 0 0 1 0 0 0 0 0 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_05">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 1 0 0 0 0 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_06">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 1 0 0 0 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_07">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 0 1 0 0 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_08">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 1 0 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_09">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 1 0 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_10">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 1 0 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_11">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 1 0 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_12">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 1 0 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_13">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer" result="reverse_luminance_layer_14">
+                  <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 1"/>
+            </feComponentTransfer>
+
+
+            <feComponentTransfer in="reverse_luminance_layer_01" result="ink_splash_layer_01">
+                  <feFuncR type="table" tableValues="0.98, 1"/>
+                  <feFuncG type="table" tableValues="0.98, 1"/>
+                  <feFuncB type="table" tableValues="0.98, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.08"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_02" result="ink_splash_layer_02">
+                  <feFuncR type="table" tableValues="0.94, 1"/>
+                  <feFuncG type="table" tableValues="0.94, 1"/>
+                  <feFuncB type="table" tableValues="0.94, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.08"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_03" result="ink_splash_layer_03">
+                  <feFuncR type="table" tableValues="0.86, 1"/>
+                  <feFuncG type="table" tableValues="0.86, 1"/>
+                  <feFuncB type="table" tableValues="0.86, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.08"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_04" result="ink_splash_layer_04">
+                  <feFuncR type="table" tableValues="0.78, 1"/>
+                  <feFuncG type="table" tableValues="0.78, 1"/>
+                  <feFuncB type="table" tableValues="0.78, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.11"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_05" result="ink_splash_layer_05">
+                  <feFuncR type="table" tableValues="0.71, 1"/>
+                  <feFuncG type="table" tableValues="0.71, 1"/>
+                  <feFuncB type="table" tableValues="0.71, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.11"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_06" result="ink_splash_layer_06">
+                  <feFuncR type="table" tableValues="0.63, 1"/>
+                  <feFuncG type="table" tableValues="0.63, 1"/>
+                  <feFuncB type="table" tableValues="0.63, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.14"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_07" result="ink_splash_layer_07">
+                  <feFuncR type="table" tableValues="0.55, 1"/>
+                  <feFuncG type="table" tableValues="0.55, 1"/>
+                  <feFuncB type="table" tableValues="0.55, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.14"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_08" result="ink_splash_layer_08">
+                  <feFuncR type="table" tableValues="0.47, 1"/>
+                  <feFuncG type="table" tableValues="0.47, 1"/>
+                  <feFuncB type="table" tableValues="0.47, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.14"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_09" result="ink_splash_layer_09">
+                  <feFuncR type="table" tableValues="0.39, 1"/>
+                  <feFuncG type="table" tableValues="0.39, 1"/>
+                  <feFuncB type="table" tableValues="0.39, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.22"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_10" result="ink_splash_layer_10">
+                  <feFuncR type="table" tableValues="0.31, 1"/>
+                  <feFuncG type="table" tableValues="0.31, 1"/>
+                  <feFuncB type="table" tableValues="0.31, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.22"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_11" result="ink_splash_layer_11">
+                  <feFuncR type="table" tableValues="0.23, 1"/>
+                  <feFuncG type="table" tableValues="0.23, 1"/>
+                  <feFuncB type="table" tableValues="0.23, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.28"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_12" result="ink_splash_layer_12">
+                  <feFuncR type="table" tableValues="0.16, 1"/>
+                  <feFuncG type="table" tableValues="0.16, 1"/>
+                  <feFuncB type="table" tableValues="0.16, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.28"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_13" result="ink_splash_layer_13">
+                  <feFuncR type="table" tableValues="0.08, 1"/>
+                  <feFuncG type="table" tableValues="0.08, 1"/>
+                  <feFuncB type="table" tableValues="0.08, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.32"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="reverse_luminance_layer_14" result="ink_splash_layer_14">
+                  <feFuncR type="table" tableValues="0.03, 1"/>
+                  <feFuncG type="table" tableValues="0.03, 1"/>
+                  <feFuncB type="table" tableValues="0.03, 1"/>
+                  <feFuncA type="table" tableValues="0, 0.32"/>
+            </feComponentTransfer>
+
+
+            <feTurbulence type="turbulence" baseFrequency="0.08" numOctaves="8" result="turbulence"/>
+
+            <feDisplacementMap in="ink_splash_layer_01" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_01"/>
+            <feDisplacementMap in="ink_splash_layer_02" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_02"/>
+            <feDisplacementMap in="ink_splash_layer_03" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_03"/>
+            <feDisplacementMap in="ink_splash_layer_04" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_04"/>
+            <feDisplacementMap in="ink_splash_layer_05" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_05"/>
+            <feDisplacementMap in="ink_splash_layer_06" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_06"/>
+            <feDisplacementMap in="ink_splash_layer_07" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_07"/>
+            <feDisplacementMap in="ink_splash_layer_08" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_08"/>
+            <feDisplacementMap in="ink_splash_layer_09" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_09"/>
+            <feDisplacementMap in="ink_splash_layer_10" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_10"/>
+            <feDisplacementMap in="ink_splash_layer_11" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_11"/>
+            <feDisplacementMap in="ink_splash_layer_12" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_12"/>
+            <feDisplacementMap in="ink_splash_layer_13" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_13"/>
+            <feDisplacementMap in="ink_splash_layer_14" in2="turbulence" scale="8" xChannelSelector="R" yChannelSelector="B" result="ink_splash_layer_14"/>
+
+
+            <feGaussianBlur in="ink_splash_layer_01" stdDeviation="0.28" result="ink_splash_layer_01"/>
+            <feGaussianBlur in="ink_splash_layer_02" stdDeviation="0.28" result="ink_splash_layer_02"/>
+            <feGaussianBlur in="ink_splash_layer_03" stdDeviation="0.28" result="ink_splash_layer_03"/>
+            <feGaussianBlur in="ink_splash_layer_04" stdDeviation="0.28" result="ink_splash_layer_04"/>
+            <feGaussianBlur in="ink_splash_layer_05" stdDeviation="0.28" result="ink_splash_layer_05"/>
+            <feGaussianBlur in="ink_splash_layer_06" stdDeviation="0.28" result="ink_splash_layer_06"/>
+            <feGaussianBlur in="ink_splash_layer_07" stdDeviation="0.28" result="ink_splash_layer_07"/>
+            <feGaussianBlur in="ink_splash_layer_08" stdDeviation="0.28" result="ink_splash_layer_08"/>
+            <feGaussianBlur in="ink_splash_layer_09" stdDeviation="0.28" result="ink_splash_layer_09"/>
+            <feGaussianBlur in="ink_splash_layer_10" stdDeviation="0.28" result="ink_splash_layer_10"/>
+            <feGaussianBlur in="ink_splash_layer_11" stdDeviation="0.28" result="ink_splash_layer_11"/>
+            <feGaussianBlur in="ink_splash_layer_12" stdDeviation="0.28" result="ink_splash_layer_12"/>
+            <feGaussianBlur in="ink_splash_layer_13" stdDeviation="0.28" result="ink_splash_layer_13"/>
+            <feGaussianBlur in="ink_splash_layer_14" stdDeviation="0.28" result="ink_splash_layer_14"/>
+
+
+            <feMerge result="ink_splash_layer">
+                  <feMergeNode in="ink_splash_layer_01"/>
+                  <feMergeNode in="ink_splash_layer_02"/>
+                  <feMergeNode in="ink_splash_layer_03"/>
+                  <feMergeNode in="ink_splash_layer_04"/>
+                  <feMergeNode in="ink_splash_layer_05"/>
+                  <feMergeNode in="ink_splash_layer_06"/>
+                  <feMergeNode in="ink_splash_layer_07"/>
+                  <feMergeNode in="ink_splash_layer_08"/>
+                  <feMergeNode in="ink_splash_layer_09"/>
+                  <feMergeNode in="ink_splash_layer_10"/>
+                  <feMergeNode in="ink_splash_layer_11"/>
+                  <feMergeNode in="ink_splash_layer_12"/>
+                  <feMergeNode in="ink_splash_layer_13"/>
+                  <feMergeNode in="ink_splash_layer_14"/>
+            </feMerge>
+
+
+            <feComposite operator="in" in="ink_splash_layer" in2="SourceGraphic" result="ink_splash_image"/>
+    </filter>
+</svg>
